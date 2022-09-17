@@ -40,21 +40,26 @@ typedef unsigned long long ull;
 */
 
 // ---------------------------------------------------------------------------------------
-#include <math.h>
 
 void solve()
 {
     // Solve below
-    
+    int n, m;
+    cin >> n >> m;
+    int right = n;
+    int left = m - n;
+    if(left < 0)
+        cout << right + abs(left) << endl;
+    else
+        cout << right << endl;
 }
-
 
 // ---------------------------------------------------------------------------------------
 int main()
 {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
-    freopen("output1.txt", "w", stdout);
+    freopen("output.txt", "w", stdout);
 #endif
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -65,6 +70,5 @@ int main()
     {
         solve();
     }
-    
     return 0;
 }

@@ -4,7 +4,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.Arrays;
 import java.util.InputMismatchException;
+
+import javax.sound.sampled.SourceDataLine;
 
 public class Main {
 
@@ -28,7 +31,6 @@ public class Main {
      */
     private static void solve(int t1) {
         int n = in.readInt();
-        System.out.println(n);
     }
 
     public static void main(String[] args) throws FileNotFoundException {
