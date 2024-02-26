@@ -45,7 +45,48 @@ typedef unsigned long long ull;
 void solve()
 {
     // Solve below
-    
+    int n = 8;
+    vector<vector<char>> board(n, vector<char>(n, '.'));
+
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            cin >> board[i][j];
+        }
+    }
+
+    char curr = ' ';
+    for(int i = 0; i < n; i++) {
+        for(int j = 1; j < n; j++) {
+            if(board[i][j] != board[i][j-1] || board[i][j] == '.') {
+                curr = ' ';
+                break;
+            } else {
+                curr = board[i][j];
+            }
+        }
+        if(curr != ' ') {
+            cout << curr << endl;
+            return;
+        }
+    }
+
+    curr = ' ';
+    for(int i = 0; i < n; i++) {
+        for(int j = 1; j < n; j++) {
+            if(board[j][i] != board[j-1][i] || board[j][i] == '.') {
+                curr = ' ';
+                break;
+            } else {
+                curr = board[j][i];
+                
+            }
+        }
+        if(curr != ' ') {
+            cout << curr << endl;
+            return;
+        }
+    }
+        
 }
 
 
@@ -54,7 +95,7 @@ int main()
 {
 #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
-    freopen("output1.txt", "w", stdout);
+    freopen("output.txt", "w", stdout);
 #endif
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
